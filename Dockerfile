@@ -6,7 +6,7 @@ WORKDIR /src
 COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -mod=vendor -trimpath -ldflags "-s -w" -o /out/nworm .
 
-FROM alpine:3.20
+FROM alpine:3.24
 RUN addgroup -S nworm && adduser -S -G nworm -h /home/nworm nworm
 COPY --from=build /out/nworm /usr/local/bin/nworm
 USER nworm
