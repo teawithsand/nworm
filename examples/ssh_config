@@ -1,0 +1,12 @@
+Host home
+  ProxyCommand nworm connect home
+  User maciej
+  HostKeyAlias home
+  StrictHostKeyChecking yes
+  IdentityFile ~/.ssh/id_ed25519
+
+Host office
+  ProxyCommand nworm connect office
+  User root
+  HostKeyAlias office
+  StrictHostKeyChecking yes

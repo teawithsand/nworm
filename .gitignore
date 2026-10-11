@@ -1,0 +1,8 @@
+/nworm
+/result
+/result-*
+/.direnv/
+# TODO: get rid of it entirely
+/vendor
+
+/tasks

@@ -1,0 +1,22 @@
+# /etc/nworm/relay.yaml  (public VPS)
+listen: ":443"
+host_key: /etc/nworm/host.key
+keepalive: 30s
+
+agents:
+  home:
+    keys:
+      - "ssh-ed25519 AAAA... agent@home"
+  office:
+    keys:
+      - "ssh-ed25519 AAAA... agent@office"
+
+admins:
+  maciej:
+    keys:
+      - "ssh-ed25519 AAAA... maciej@laptop"
+    # DEFAULT-DENY: empty/omitted allow grants access to nothing.
+    # List the agents this admin may reach:
+    allow: [home, office]
+    # ...or deliberately allow every registered agent with:
+    # allow: ["*"]

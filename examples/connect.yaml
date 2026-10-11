@@ -1,0 +1,10 @@
+# ~/.config/nworm/connect.yaml  (admin PC)
+admin_user: maciej
+identity: ~/.config/nworm/admin.key
+known_hosts: ~/.ssh/known_hosts
+relays:
+  - "relay1.example.com:443"
+  - "relay2.example.com:443"
+port: 22
+dest:
+  home-rdp: 3389
