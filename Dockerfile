@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 # Bump this tag if your go.mod requires a different toolchain.
-FROM golang:1.26-alpine AS build
+FROM golang:1.27-alpine AS build
 WORKDIR /src
 # Dependencies are vendored, so the build needs no network and no go mod download.
 COPY . .
